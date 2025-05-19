@@ -29,13 +29,24 @@ export default function HeroSection() {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-6 text-sm uppercase font-medium items-center">
-          <a href="#">About Us</a>
-          <a href="#">Courses</a>
-          <a href="#">Become a Member</a>
-          <a href="#">Events</a>
-          <a href="#">Gallery</a>
-          <a href="#">Career</a>
+        <nav className="hidden md:flex gap-6 text-sm uppercase font-medium flex justify-end items-left">
+          <ul >
+            <li className="flex justify-end"><a href="#">About Us</a></li>
+            <li className="flex justify-end"><a href="#">Courses</a></li>
+            <li className="flex justify-end"><a href="#">Become a Member</a></li>
+          </ul>
+
+          <ul>
+            <li className="flex justify-end"><a href="#">Events</a></li>
+            <li className="flex justify-end"><a href="#">Gallery</a></li>
+            <li className="flex justify-end"><a href="#">Career</a></li>
+          </ul>
+          
+          
+          
+          
+         
+          
           <a href="#" className="ml-4 font-bold">Contact</a>
           <a href="#" className="text-yellow-400 font-semibold">Members Login</a>
           {/* <button
@@ -127,7 +138,7 @@ export default function HeroSection() {
             <video
                 id="heroVideo"
                 className="rounded-md shadow-lg w-full object-cover"
-                src="ads.mp4"
+                src="/ads.mp4"
                 poster={heroImage}
                 preload="metadata"
             />
@@ -152,12 +163,12 @@ export default function HeroSection() {
             </button>
 
             {/* Scroll To Explore Icon */}
-             <div className="absolute top-0 right-0 w-32 h-32 z-30">
+             <div className="absolute top-0 right-0 w-32 h-32 ">
       <div className="relative w-full h-full flex items-center justify-center rounded-full bg-black animate-spin-slow">
 
         {/* Arrow */}
         <svg
-          className="w-6 h-6 text-yellow-400 z-10"
+          className="w-10 h-20 text-yellow-400 z-10"
           fill="none"
           stroke="currentColor"
           strokeWidth="2.5"
