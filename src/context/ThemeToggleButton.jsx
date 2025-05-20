@@ -8,7 +8,7 @@ export default function ThemeToggleButton() {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed top-40 right-5 p-2 bg-gray-800 dark:bg-yellow-300 rounded-full shadow-lg transition-colors"
+      className="fixed top-5 right-4 sm:top-10 sm:right-5 md:top-40 md:right-5 p-2 bg-gray-800 dark:bg-yellow-300 rounded-full shadow-lg transition-colors z-50"
       title="Toggle Theme"
     >
       {darkMode ? (
