@@ -74,7 +74,7 @@ export default function LegacySection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          <h2 className="text-4xl font-asgard sm:text-5xl font-extrabold leading-tight">
+          <h2 className="text-4xl font-asgard uppercase sm:text-5xl font-extrabold leading-tight">
             WHERE HISTORY <br />
             FUELS THE <span className="text-yellow-400">FUTURE</span>
           </h2>
