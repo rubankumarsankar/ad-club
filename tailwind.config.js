@@ -18,6 +18,9 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         heading: ['"Orbitron"', 'sans-serif'],
+        asgard: ['"Asgard Trial"', 'sans-serif'],
+        glancyr: ['"Glancyr"', 'sans-serif'],
+        
       },
       animation: {
         'spin-slow': 'spin 8s linear infinite',
