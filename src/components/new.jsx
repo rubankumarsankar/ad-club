@@ -17,7 +17,7 @@ const sliderData = [
   },
 ];
 
-export default function LegacySection() {
+export default function LegacyHeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -35,9 +35,9 @@ export default function LegacySection() {
         <motion.div
           className="flex justify-end px-4"
           initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 1 }}
+  viewport={{ once: true }}
         >
           <div className="text-left space-y-4 max-w-md">
             <h4 className="uppercase font-asgard text-xs text-gray-500 dark:text-gray-400 tracking-widest">

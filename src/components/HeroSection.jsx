@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import heroImage from "../assets/hero-img.svg";
 import bgGraphic from "../assets/hero-fream.svg";
-import logo from "../assets/logo.svg";
+import logo from "../assets/adclubmadras-logo.png";
 import { useTheme } from "../context/ThemeContext";
 import { motion } from "framer-motion";
 import { Menu, MoveLeft, X } from "lucide-react"; // or use Heroicons
@@ -24,12 +24,12 @@ export default function HeroSection() {
     >
       {/* Header */}
       <header className="absolute top-6 left-0 w-full px-6 md:px-12 flex justify-between items-center z-20">
-        <div className="text-xl font-bold w-12">
+        <div className="text-xl font-bold w-100">
           <img src={logo} alt="Logo" />
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-6 text-sm uppercase font-medium flex justify-end items-left">
+        <nav className="hidden md:flex gap-10  text-sm uppercase font-medium flex justify-end items-left">
           <ul >
             <li className="flex justify-end"><a href="#">About Us</a></li>
             <li className="flex justify-end"><a href="#">Courses</a></li>
@@ -96,15 +96,15 @@ export default function HeroSection() {
 
       {/* Hero Content */}
       <div
-  className="relative z-10 pt-32 text-left max-w-6xl mx-auto"
-  style={{
-    backgroundImage: `url(${bgGraphic})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    marginTop:"40px"
-  }}
->
+          className="relative z-10 pt-32 text-left max-w-6xl mx-auto"
+          style={{
+            backgroundImage: `url(${bgGraphic})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            marginTop:"40px"
+          }}
+        >
         <div className="relative flex flex-col md:flex-row justify-start items-start">
           <motion.h1
             className="text-4xl md:text-7xl font-asgard uppercase leading-tight tracking-tight"
@@ -227,3 +227,5 @@ export default function HeroSection() {
     </section>
   );
 }
+
+
