@@ -1,6 +1,6 @@
 
  import React, { useEffect } from "react";
- import bgGraphic from "../assets/pen-outline-1.svg";
+ import bgPen from "../assets/pen-outline-1.svg";
  import AOS from "aos";
  import "aos/dist/aos.css";
  
@@ -19,7 +19,7 @@
        <div
          className="absolute inset-0 z-0"
          style={{
-           backgroundImage: `url(${bgGraphic})`,
+           backgroundImage: `url(${bgPen})`,
            backgroundRepeat: "no-repeat",
            backgroundPosition: "left center",
            backgroundSize: "contain",
