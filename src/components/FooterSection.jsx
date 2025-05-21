@@ -89,7 +89,7 @@ const FooterSection = () => {
         <p className="hover:text-white decoration-white transition duration-200">ADVERTISING CLUB MADRAS © 2024</p>
         <p className="hover:text-white decoration-white transition duration-200">PRIVACY POLICY</p>
         <p className="hover:text-white decoration-white transition duration-200">
-          DESIGN & DEVELOPMENT <span className="font-bold">BY AJAYWORKS</span>
+          DESIGN & DEVELOPMENT <span className="font-bold">BY AYATIWORKS</span>
         </p>
       </div>
     </div>
