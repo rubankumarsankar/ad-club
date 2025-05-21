@@ -32,30 +32,30 @@ export default function HeroSection() {
         <nav className="hidden md:flex gap-10 text-sm uppercase font-medium justify-end items-start">
           <ul>
             <li className="flex justify-end">
-              <a href="#" className="hover:text-yellow-400 hover:underline hover:decoration-yellow-400 transition duration-200">About Us</a>
+              <a href="#" className="hover:text-yellow-400  hover:decoration-yellow-400 transition duration-200">About Us</a>
             </li>
             <li className="flex justify-end">
-              <a href="#" className="hover:text-yellow-400 hover:underline hover:decoration-yellow-400 transition duration-200">Courses</a>
+              <a href="#" className="hover:text-yellow-400  hover:decoration-yellow-400 transition duration-200">Courses</a>
             </li>
             <li className="flex justify-end">
-              <a href="#" className="hover:text-yellow-400 hover:underline hover:decoration-yellow-400 transition duration-200">Become a Member</a>
+              <a href="#" className="hover:text-yellow-400  hover:decoration-yellow-400 transition duration-200">Become a Member</a>
             </li>
           </ul>
 
           <ul>
             <li className="flex justify-end">
-              <a href="#" className="hover:text-yellow-400 hover:underline hover:decoration-yellow-400 transition duration-200">Events</a>
+              <a href="#" className="hover:text-yellow-400  hover:decoration-yellow-400 transition duration-200">Events</a>
             </li>
             <li className="flex justify-end">
-              <a href="#" className="hover:text-yellow-400 hover:underline hover:decoration-yellow-400 transition duration-200">Gallery</a>
+              <a href="#" className="hover:text-yellow-400  hover:decoration-yellow-400 transition duration-200">Gallery</a>
             </li>
             <li className="flex justify-end">
-              <a href="#" className="hover:text-yellow-400 hover:underline hover:decoration-yellow-400 transition duration-200">Career</a>
+              <a href="#" className="hover:text-yellow-400  hover:decoration-yellow-400 transition duration-200">Career</a>
             </li>
           </ul>
 
-          <a href="#" className="ml-4 font-bold hover:text-yellow-400 hover:underline hover:decoration-yellow-400 transition duration-200">Contact</a>
-          <a href="#" className="text-yellow-400 font-semibold hover:underline hover:decoration-yellow-500 transition duration-200">Members Login</a>
+          <a href="#" className="ml-4 font-bold hover:text-yellow-400 hover:decoration-yellow-400 transition duration-200">Contact</a>
+          <a href="#" className="text-yellow-400 font-semibold hover:decoration-yellow-500 transition duration-200">Members Login</a>
         </nav>
 
 

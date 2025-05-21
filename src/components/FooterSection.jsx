@@ -21,27 +21,27 @@ const FooterSection = () => {
             <img
               src={logo}
               alt="logo"
-              className="w-24 sm:w-28 md:w-36 lg:w-40"
+              className="w-24 sm:w-28 md:w-36 lg:w-40 text-black"
             />
           </div>
 
           {/* Navigation */}
           <div className="md:col-start-6 md:col-span-6 grid grid-cols-2 sm:grid-cols-4 text-xs md:text-sm font-normal leading-tight gap-y-4 animate-slideInUp mt-6 md:mt-0 text-center md:text-right">
             <div className="flex flex-col space-y-2">
-              <a href="#" className="hover:text-white hover:font-bold hover:underline decoration-white transition duration-200">ABOUT US</a>
-              <a href="#" className="hover:text-white hover:font-bold hover:underline decoration-white transition duration-200">COURSES</a>
-              <a href="#" className="hover:text-white hover:font-bold hover:underline decoration-white transition duration-200">BECOME A MEMBER</a>
+              <a href="#" className="hover:text-white hover:font-bold  decoration-white transition duration-200">ABOUT US</a>
+              <a href="#" className="hover:text-white hover:font-bold  decoration-white transition duration-200">COURSES</a>
+              <a href="#" className="hover:text-white hover:font-bold  decoration-white transition duration-200">BECOME A MEMBER</a>
             </div>
             <div className="flex flex-col space-y-2">
-              <a href="#" className="hover:text-white hover:font-bold hover:underline decoration-white transition duration-200">EVENTS</a>
-              <a href="#" className="hover:text-white hover:font-bold hover:underline decoration-white transition duration-200">GALLERY</a>
-              <a href="#" className="hover:text-white hover:font-bold hover:underline decoration-white transition duration-200">CAREER</a>
+              <a href="#" className="hover:text-white hover:font-bold decoration-white transition duration-200">EVENTS</a>
+              <a href="#" className="hover:text-white hover:font-bold  decoration-white transition duration-200">GALLERY</a>
+              <a href="#" className="hover:text-white hover:font-bold  decoration-white transition duration-200">CAREER</a>
             </div>
             <div className="flex flex-col space-y-2 font-extrabold">
-              <a href="#" className="hover:text-white hover:underline decoration-white transition duration-200">CONTACT</a>
+              <a href="#" className="hover:text-white  decoration-white transition duration-200">CONTACT</a>
             </div>
             <div className="flex flex-col space-y-2 font-extrabold">
-              <a href="#" className="hover:text-white hover:underline decoration-white transition duration-200">MEMBERS LOGIN</a>
+              <a href="#" className="hover:text-white decoration-white transition duration-200">MEMBERS LOGIN</a>
             </div>
           </div>
 
@@ -68,14 +68,14 @@ const FooterSection = () => {
               <a
                 href="#"
                 aria-label="LinkedIn"
-                className="text-black hover:text-gray-800 transition-all duration-300"
+                className="text-black hover:text-white transition-all duration-300"
               >
                 <FaLinkedinIn size={18} />
               </a>
               <a
                 href="#"
                 aria-label="Instagram"
-                className="text-black hover:text-gray-800 transition-all duration-300"
+                className="text-black hover:text-white transition-all duration-300"
               >
                 <FaInstagram size={18} />
               </a>
@@ -85,10 +85,10 @@ const FooterSection = () => {
       </div>
 
       {/* Footer Bottom Bar */}
-      <div className="mt-10 pt-6 border-t border-black/30 text-xs font-medium flex flex-col md:flex-row justify-between items-center gap-3 text-center md:text-left">
-        <p>ADVERTISING CLUB MADRAS © 2024</p>
-        <p>PRIVACY POLICY</p>
-        <p>
+      <div className="mt-10 pt-6 border-t  border-black/30 text-xs font-medium flex flex-col md:flex-row justify-between items-center gap-3 text-center md:text-left">
+        <p className="hover:text-white decoration-white transition duration-200">ADVERTISING CLUB MADRAS © 2024</p>
+        <p className="hover:text-white decoration-white transition duration-200">PRIVACY POLICY</p>
+        <p className="hover:text-white decoration-white transition duration-200">
           DESIGN & DEVELOPMENT <span className="font-bold">BY AJAYWORKS</span>
         </p>
       </div>
