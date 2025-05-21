@@ -25,8 +25,12 @@ export default function JoinUsSection() {
           Join Us Today
         </h2>
 
-        <p className="text-xl md:font-glancyrfont-glancyr uppercase leading-relaxed font-light mb-8 px-4">
-          Join a vibrant community of advertising professionals, storytellers, and creative minds. Whether you're looking to network, learn, or showcase your talent, the Advertising Club Madras welcomes you.
+        <p className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-xl font-glancyr uppercase leading-relaxed font-light mb-10 px-4 md:px-12 text-center sm:text-center">
+          Join a vibrant community of advertising <br className="hidden sm:block" />
+          professionals, storytellers, and creative minds. <br className="hidden sm:block" />
+          Whether you're looking to network, learn, or <br className="hidden sm:block" />
+          showcase your talent, the Advertising Club Madras <br className="hidden sm:block" />
+          welcomes you.
         </p>
 
         <motion.button

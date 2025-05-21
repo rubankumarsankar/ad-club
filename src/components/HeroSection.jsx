@@ -114,7 +114,7 @@ export default function HeroSection() {
         >
         <div className="relative flex flex-col md:flex-row justify-start items-start">
           <motion.h1
-            className="text-4xl md:text-7xl font-asgard uppercase leading-tight tracking-tight"
+            className="text-3xl sm:text-5xl md:text-7xl font-asgard uppercase leading-tight tracking-tight"
             initial={{ y: 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -175,7 +175,7 @@ export default function HeroSection() {
                 </button>
 
                 {/* Scroll To Explore Icon */}
-                <div className="absolute -top-12 -right-12 w-28 h-28 md:w-32 md:h-32">
+                <div className="absolute -top-10 -right-7 md:-top-12 md:-right-12  w-28 h-28 md:w-32 md:h-32">
                 <div className="relative w-full h-full flex items-center justify-center rounded-full bg-black">
                     {/* Rotating Circular Text */}
                     <div className="absolute w-full h-full animate-spin-slow">

@@ -72,16 +72,18 @@ export default function UpcomingEvents() {
               </div>
 
               {/* Title */}
-              <div className="flex-1 px-4">
-                <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold font-glancyr mb-1">{event.title}</p>
-              </div>
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full px-4 space-y-2 sm:space-y-0">
+              {/* Title */}
+              <p className="text-xs sm:text-xs md:text-sm lg:text-lg xl:text-xl font-semibold font-glancyr">
+                {event.title}
+              </p>
 
               {/* Tag */}
-              <div className="px-4">
-                <span className="text-[10px] sm:text-sm uppercase font-glancyr border border-white px-2 py-1 rounded-full">
-                  {event.tag}
-                </span>
-              </div>
+              <span className="text-[10px] sm:text-sm uppercase font-glancyr border border-white px-2 py-1 rounded-full">
+                {event.tag}
+              </span>
+            </div>
+
 
               {/* Arrow / View Details Button */}
               <div className="ml-4">

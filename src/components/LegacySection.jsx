@@ -31,13 +31,13 @@ export default function LegacySection() {
     <section className="bg-white dark:bg-black text-black dark:text-white px-6 py-16 md:py-24 transition-colors duration-500">
       <div className="max-w-5xl mx-auto space-y-20">
 
-        {/* Top Section - Right Aligned Slider */}
+        {/* Top Slider Section */}
         <motion.div
           className="flex justify-end px-4"
           initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
         >
           <div className="text-left space-y-4 max-w-md">
             <h4 className="uppercase font-asgard text-xs text-gray-500 dark:text-gray-400 tracking-widest">
@@ -67,12 +67,13 @@ export default function LegacySection() {
           </div>
         </motion.div>
 
-        {/* Bottom Section - Legacy Message */}
+        {/* Legacy Message Section */}
         <motion.div
           className="space-y-8 text-left px-4"
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          viewport={{ once: true }}
         >
           <h2 className="text-4xl font-asgard uppercase sm:text-5xl font-extrabold leading-tight">
             WHERE HISTORY <br />
@@ -89,7 +90,7 @@ export default function LegacySection() {
             whileHover={{ scale: 1.05 }}
             className="mt-8 inline-flex font-asgard items-center"
           >
-            <span className="px-6 py-3  bg-yellow-400 text-black rounded-full font-bold hover:bg-yellow-300 transition-all duration-300">
+            <span className="px-6 py-3 bg-yellow-400 text-black rounded-full font-bold hover:bg-yellow-300 transition-all duration-300">
               EXPLORE OUR LEGACY
             </span>
             <span className="px-4 py-3 bg-yellow-400 text-black rounded-full hover:bg-yellow-300 transition-all duration-300 flex items-center justify-center">

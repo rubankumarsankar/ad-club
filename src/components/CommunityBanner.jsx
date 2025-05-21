@@ -1,33 +1,46 @@
-import React from "react";
-import { motion } from "framer-motion";
-import bgGraphic1 from "../assets/pen-outline-hero.svg";
 
-export default function CommunityBanner() {
-  return (
-    <section
-      className="relative bg-white dark:bg-black text-black dark:text-white py-20 px-4 sm:px-6 md:px-10 lg:px-16 bg-no-repeat bg-center bg-contain transition-colors duration-500"
-      style={{
-        backgroundImage: `url(${bgGraphic1})`,
-        
-      }}
-    >
-      <div className="max-w-5xl mx-auto text-center leading-none relative z-10">
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-asgard font-extrabold uppercase space-y-4"
-        >
-          <div className="text-yellow-400">
-            A <br  /> COMMUNITY
-          </div>
-          <div>Built On</div>
-          <div>
-            Collabor <br  /> Ation <br  />
-            <span>& Growth</span>
-          </div>
-        </motion.h2>
-      </div>
-    </section>
-  );
-}
+ import React, { useEffect } from "react";
+ import bgGraphic from "../assets/pen-outline-1.svg";
+ import AOS from "aos";
+ import "aos/dist/aos.css";
+ 
+ export default function CommunityBanner() {
+   useEffect(() => {
+     AOS.init({
+       once: true,
+       duration: 800,
+       easing: 'ease-out',
+     });
+   }, []);
+ 
+   return (
+     <section className="relative w-full min-h-screen bg-black overflow-hidden flex items-center justify-center text-center px-4 py-16 sm:py-20 md:py-24 lg:py-32">
+       {/* Background Image */}
+       <div
+         className="absolute inset-0 z-0"
+         style={{
+           backgroundImage: `url(${bgGraphic})`,
+           backgroundRepeat: "no-repeat",
+           backgroundPosition: "left center",
+           backgroundSize: "contain",
+         }}
+       />
+ 
+       {/* Overlay */}
+       <div className="absolute inset-0 bg-black opacity-40 z-10 " />
+ 
+       {/* Text */}
+       <div className="relative z-20 -mt-10 mt-0 sm:-mt-[150px]" data-aos="fade-up">
+         <h1 className="uppercase font-black font-asgard tracking-tight leading-tight text-yellow-400 space-y-2" >
+           <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">A</div>
+           <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">Community</div>
+           <div className="mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">Built On</div>
+           <div className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Collabor</div>
+           <div className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">ation &</div>
+           <div className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Growth</div>
+         </h1>
+       </div>
+     </section>
+   );
+ }
+ 
