@@ -1,8 +1,11 @@
 import CommunityBanner from './components/CommunityBanner';
+import DiscoverMoments from './components/DiscoverMoments';
 import EventSection from './components/EventSection';
 import FooterSection from './components/FooterSection';
 import HeroSection from './components/HeroSection';
 import JoinClubSection from './components/JoinClubSection';
+import JoinUsSection from './components/JoinUsSection';
+import LatestNews from './components/LatestNews';
 import LegacySection from './components/LegacySection';
 import LegacyHeroSection from './components/new';
 import UpcomingEvents from './components/UpcomingEvents';
@@ -23,6 +26,9 @@ function App() {
       <JoinClubSection />
       <EventSection />
       <UpcomingEvents />
+      <LatestNews />
+      <JoinUsSection />
+      <DiscoverMoments />
       <FooterSection />
       <ThemeToggleButton />
     </ThemeProvider>

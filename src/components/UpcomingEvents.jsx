@@ -73,12 +73,12 @@ export default function UpcomingEvents() {
 
               {/* Title */}
               <div className="flex-1 px-4">
-                <p className="text-xl font-semibold font-glancyr mb-1">{event.title}</p>
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold font-glancyr mb-1">{event.title}</p>
               </div>
 
               {/* Tag */}
               <div className="px-4">
-                <span className="text-[10px] uppercase font-glancyr border border-white px-2 py-1 rounded-full">
+                <span className="text-[10px] sm:text-sm uppercase font-glancyr border border-white px-2 py-1 rounded-full">
                   {event.tag}
                 </span>
               </div>
@@ -123,3 +123,4 @@ export default function UpcomingEvents() {
     </section>
   );
 }
+ 

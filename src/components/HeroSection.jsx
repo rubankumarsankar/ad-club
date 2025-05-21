@@ -29,28 +29,35 @@ export default function HeroSection() {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-10  text-sm uppercase font-medium flex justify-end items-left">
-          <ul >
-            <li className="flex justify-end"><a href="#">About Us</a></li>
-            <li className="flex justify-end"><a href="#">Courses</a></li>
-            <li className="flex justify-end"><a href="#">Become a Member</a></li>
+        <nav className="hidden md:flex gap-10 text-sm uppercase font-medium justify-end items-start">
+          <ul>
+            <li className="flex justify-end">
+              <a href="#" className="hover:text-yellow-400 hover:underline hover:decoration-yellow-400 transition duration-200">About Us</a>
+            </li>
+            <li className="flex justify-end">
+              <a href="#" className="hover:text-yellow-400 hover:underline hover:decoration-yellow-400 transition duration-200">Courses</a>
+            </li>
+            <li className="flex justify-end">
+              <a href="#" className="hover:text-yellow-400 hover:underline hover:decoration-yellow-400 transition duration-200">Become a Member</a>
+            </li>
           </ul>
 
           <ul>
-            <li className="flex justify-end"><a href="#">Events</a></li>
-            <li className="flex justify-end"><a href="#">Gallery</a></li>
-            <li className="flex justify-end"><a href="#">Career</a></li>
+            <li className="flex justify-end">
+              <a href="#" className="hover:text-yellow-400 hover:underline hover:decoration-yellow-400 transition duration-200">Events</a>
+            </li>
+            <li className="flex justify-end">
+              <a href="#" className="hover:text-yellow-400 hover:underline hover:decoration-yellow-400 transition duration-200">Gallery</a>
+            </li>
+            <li className="flex justify-end">
+              <a href="#" className="hover:text-yellow-400 hover:underline hover:decoration-yellow-400 transition duration-200">Career</a>
+            </li>
           </ul>
 
-          <a href="#" className="ml-4 font-bold">Contact</a>
-          <a href="#" className="text-yellow-400 font-semibold">Members Login</a>
-          {/* <button
-            onClick={toggleTheme}
-            className="ml-4 px-3 py-1 rounded-full bg-gray-800 dark:bg-gray-200 text-xs font-medium text-white dark:text-black"
-          >
-            {darkMode ? "Light" : "Dark"} Mode
-          </button> */}
+          <a href="#" className="ml-4 font-bold hover:text-yellow-400 hover:underline hover:decoration-yellow-400 transition duration-200">Contact</a>
+          <a href="#" className="text-yellow-400 font-semibold hover:underline hover:decoration-yellow-500 transition duration-200">Members Login</a>
         </nav>
+
 
         {/* Mobile Toggle Button */}
         <button
