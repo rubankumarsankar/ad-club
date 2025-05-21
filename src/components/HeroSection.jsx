@@ -24,9 +24,11 @@ export default function HeroSection() {
     >
       {/* Header */}
       <header className="absolute top-6 left-0 w-full px-6 md:px-12 flex justify-between items-center z-20">
+        <a href="/">
         <div className="text-xl font-bold w-100">
           <img src={logo} alt="Logo" />
         </div>
+          </a>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-10 text-sm uppercase font-medium justify-end items-start">
