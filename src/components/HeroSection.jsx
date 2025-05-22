@@ -87,18 +87,6 @@ export default function HeroSection() {
     <a href="#" className="hover:text-yellow-400">Career</a>
     <a href="#" className="font-bold hover:text-yellow-400">Contact</a>
     <a href="#" className="text-yellow-400 font-semibold">Members Login</a>
-
-    {/* Theme Toggle Button */}
-    {/* <button
-      onClick={toggleTheme}
-      className={`mt-4 px-4 py-2 rounded-full text-xs font-medium transition-colors duration-300 ${
-        darkMode
-          ? "bg-gray-100 text-black"
-          : "bg-gray-800 text-white"
-      }`}
-    >
-      {darkMode ? "Light" : "Dark"} Mode
-    </button> */}
   </div>
 )}
 
@@ -118,8 +106,9 @@ export default function HeroSection() {
           <motion.h1
             className="text-3xl sm:text-5xl md:text-7xl font-asgard uppercase leading-tight tracking-tight"
             initial={{ y: 80, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             A Legacy <br />
             of Innovation <br />
@@ -127,10 +116,12 @@ export default function HeroSection() {
           </motion.h1>
 
           <motion.p
-            className=" md:absolute text-xs font-glancyr md:text-sm mt-8 md:mt-0 md:ml-10 max-w-md justify-end leading-relaxed tracking-tight" 
-            initial={{ x: 80, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+              className="md:absolute text-xs font-glancyr md:text-sm mt-8 md:mt-0 md:ml-10 max-w-md justify-end leading-relaxed tracking-tight"
+              initial={{ x: 80, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+
             style={{
     // Apply only on screens wider than 768px (Tailwind's md breakpoint)
     ...(window.innerWidth >= 768 ? { marginLeft: "500px" } : {})
@@ -141,11 +132,12 @@ export default function HeroSection() {
         </div>
 
         <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.6 }}
-            className="relative w-full max-w-4xl mx-auto mt-12"
-            >
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="relative w-full max-w-4xl mx-auto mt-12"
+        >
             {/* Video Container */}
             <div className="relative w-full">
                 {/* Video Element */}
@@ -223,16 +215,6 @@ export default function HeroSection() {
         
       </div>
 
-      {/* Scroll To Explore */}
-      {/* <motion.div
-        initial={{ opacity: 0, x: 40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 1 }}
-        className="absolute right-6 bottom-10 transform rotate-90 text-xs uppercase tracking-widest flex items-center space-x-2"
-      >
-        <span>Scroll to explore</span>
-        <div className="w-4 h-4 border-2 border-current rounded-full animate-bounce" />
-      </motion.div> */}
     </section>
   );
 }

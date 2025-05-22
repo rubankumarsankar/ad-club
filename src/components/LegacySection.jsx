@@ -32,18 +32,18 @@ export default function LegacySection() {
       <div className="max-w-5xl mx-auto space-y-20">
 
         {/* Top Slider Section */}
-        <motion.div
-          className="flex justify-end px-4"
+       <motion.div
+          className="flex justify-center sm:justify-end px-4"
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <div className="text-left space-y-4 max-w-md">
+          <div className="text- sm:text-left space-y-4 max-w-md">
             <h4 className="uppercase font-asgard text-xs text-gray-500 dark:text-gray-400 tracking-widest">
               Some facts about us
             </h4>
-            <div className="w-30 h-0.5 bg-black dark:bg-white mb-4 ml-auto" />
+            <div className="w-30 h-0.5 bg-black dark:bg-white mb-4 ml-0 sm:ml-auto" />
 
             <h2 className="text-4xl font-extrabold text-yellow-400">
               {sliderData[activeIndex].count}
@@ -66,6 +66,7 @@ export default function LegacySection() {
             </div>
           </div>
         </motion.div>
+
 
         {/* Legacy Message Section */}
         <motion.div

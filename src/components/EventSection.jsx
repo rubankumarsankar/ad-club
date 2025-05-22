@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Circle from "../assets/rounded.svg"; // assumed compatible in both themes
+import Circle from "../assets/rounded.svg";
 
 export default function EventSection() {
   return (
@@ -17,9 +17,14 @@ export default function EventSection() {
       <div className="relative z-10 max-w-4xl text-center leading-tight px-4">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="text-3xl sm:text-4xl font-asgard md:text-6xl lg:text-7xl font-extrabold uppercase"
+          // Optional: make the text slightly draggable
+          drag="x"
+          dragConstraints={{ left: -30, right: 30 }}
+          dragElastic={0.2}
         >
           Stay ahead of <br /> the curve by participating in our upcoming<br />
           events

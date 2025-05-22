@@ -25,7 +25,9 @@ export default {
       },
       animation: {
         'spin-slow': 'spin 8s linear infinite',
+        'spin': 'spin 2s linear infinite',
         marquee: "marquee 30s linear infinite",
+        marquee1: "marquee 30s linear infinite",
         fadeIn: 'fadeIn 0.6s ease-out',
         slideInUp: 'slideInUp 0.6s ease-out',
         slideInLeft: 'slideInLeft 0.6s ease-out',
@@ -35,6 +37,10 @@ export default {
         marquee: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-100%)" },
+        },
+         marquee1: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
         fadeIn: {
       '0%': { opacity: 0 },
