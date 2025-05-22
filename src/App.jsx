@@ -23,18 +23,18 @@ function App() {
         {/* <Loader /> */}
       <HeroSection />
       <LegacySection />
-      {/* <LegacyHeroSection/> */}
+      
       <CommunityBanner />
-      {/* <Community /> */}
+      
       <WhyJoinUsBanner />
       <JoinClubSection />
       <EventSection />
       <UpcomingEvents />
       <LatestNews />
-      {/* <JoinUsBanner /> */}
+      <JoinUsBanner />
       <JoinUsSection />
       <DiscoverMoments />
-      {/* <FooterBanner /> */}
+      
       <ScrollToTopWithLoader />
       <FooterSection />
       <ThemeToggleButton />

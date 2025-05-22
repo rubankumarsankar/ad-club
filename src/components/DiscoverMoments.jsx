@@ -2,37 +2,47 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
-// Import images from assets folder
+// Import images
 import image1 from "../assets/image15.svg";
 import image2 from "../assets/image16.svg";
 import image3 from "../assets/image17.svg";
 
-const images = [image1, image2, image3];
+const images = [image1, image2, image3, image1, image2, image3];
 
 export default function DiscoverMoments() {
   return (
-    <section className="bg-black text-white py-16 px-4">
+    <section className="bg-black text-white py-16 px-4 overflow-hidden">
       <h2 className="text-center text-3xl md:text-4xl font-extrabold uppercase mb-10 font-asgard">
         Discover Our <br /> Moments
       </h2>
 
-      {/* Images Row */}
-      <div className="flex justify-center gap-6 flex-wrap md:flex-nowrap max-w-6xl mx-auto">
-        {images.map((src, idx) => (
-          <div
-            key={idx}
-            className="transition-transform duration-500 hover:rotate-3 hover:scale-105"
-          >
-            <img
-              src={src}
-              alt={`Moment ${idx + 1}`}
-              className="w-72 h-96 object-cover rounded-lg shadow-md"
-            />
-          </div>
-        ))}
+      {/* Auto-scrolling container */}
+      <div className="relative w-full overflow-hidden">
+        <motion.div
+          className="flex gap-6 w-max"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            repeat: Infinity,
+            duration: 20,
+            ease: "linear",
+          }}
+        >
+          {[...images, ...images].map((src, idx) => (
+            <div
+              key={idx}
+              className="transition-transform duration-500 hover:rotate-3 hover:scale-105"
+            >
+              <img
+                src={src}
+                alt={`Moment ${idx + 1}`}
+                className="w-72 h-96 object-cover rounded-lg shadow-md"
+              />
+            </div>
+          ))}
+        </motion.div>
       </div>
 
-      {/* Button */}
+      {/* View All Button */}
       <div className="text-center mt-12">
         <motion.button
           whileHover={{ scale: 1.05 }}

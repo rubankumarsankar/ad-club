@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import News1 from "../assets/Frame-1.svg";
@@ -24,14 +24,52 @@ const news = [
     subtitle: "",
     tag: "Events",
   },
+  {
+    image: News1,
+    title: "More Talent Building Events Coming Up",
+    subtitle: "",
+    tag: "Updates",
+  },
+  {
+    image: News2,
+    title: "New Partner Collaboration Announced",
+    subtitle: "",
+    tag: "Partnership",
+  },
 ];
 
 export default function LatestNews() {
+  const [startIndex, setStartIndex] = useState(0);
+  const timeoutRef = useRef(null);
+  const visibleCount = 3;
+
+  const resetTimeout = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+  };
+
+  useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(() => {
+      setStartIndex((prev) =>
+        (prev + 1) % news.length
+      );
+    }, 4000);
+    return () => resetTimeout();
+  }, [startIndex]);
+
+  // Get 3 items in a window, wrap around the array
+  const getVisibleItems = () => {
+    const items = [];
+    for (let i = 0; i < visibleCount; i++) {
+      items.push(news[(startIndex + i) % news.length]);
+    }
+    return items;
+  };
+
   return (
     <section className="bg-black text-white py-16 px-4">
-      {/* Section Heading */}
       <motion.h2
-        className="text-center text-white font-asgard font-extrabold text-3xl uppercase mb-12 tracking-wider"
+        className="text-center font-asgard font-extrabold text-3xl uppercase mb-12 tracking-wider"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -40,45 +78,49 @@ export default function LatestNews() {
         Latest News
       </motion.h2>
 
-      {/* News Grid */}
-      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-        {news.map((item, idx) => (
-          <motion.div
-            key={idx}
-            className="group"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: idx * 0.2 }}
-            viewport={{ once: true }}
-          >
-            {/* Image */}
-            <div className="w-full h-66 overflow-hidden rounded-md mb-4">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
+      {/* Carousel */}
+      <div className="overflow-hidden max-w-7xl mx-auto">
+        <motion.div
+          className="flex gap-6"
+          animate={{ x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          {getVisibleItems().map((item, idx) => {
+            const isCenter = idx === 1; // middle card
+            return (
+              <motion.div
+                key={idx}
+                className={`w-full md:w-1/3 flex-shrink-0 transform transition-transform duration-500 ${
+                  isCenter ? "scale-110 z-10" : "scale-95 opacity-80"
+                }`}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.2 }}
+              >
+                <div className="group">
+                  <div className="w-full h-72 overflow-hidden rounded-md mb-4">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  {item.subtitle && (
+                    <div className="bg-gradient-to-t from-[#FADADD] to-[#FAE1DD] text-black text-center p-4 text-sm font-bold mb-4">
+                      {item.subtitle}
+                    </div>
+                  )}
+                  <p className="text-sm font-bold uppercase mb-2">{item.title}</p>
+                  <div className="border-t border-white border-opacity-40 my-2" />
+                  <span className="text-[10px] uppercase border border-white px-2 py-1 rounded-full inline-block mb-2">
+                    {item.tag}
+                  </span>
+                </div>
+              </motion.div>
+            );
+          })}
 
-            {/* Subtitle */}
-            {item.subtitle && (
-              <div className="bg-gradient-to-t from-[#FADADD] to-[#FAE1DD] text-black text-center p-4 text-sm font-bold leading-tight mb-4">
-                {item.subtitle}
-              </div>
-            )}
-
-            {/* Title */}
-            <p className="text-sm font-bold uppercase mb-2">{item.title}</p>
-
-            {/* Divider */}
-            <div className="border-t border-white border-opacity-40 mt-2 mb-2" />
-
-            {/* Tag */}
-            <span className="text-[10px] uppercase border border-white px-2 py-1 rounded-full inline-block mb-2">
-              {item.tag}
-            </span>
-          </motion.div>
-        ))}
+        </motion.div>
       </div>
 
       {/* View All Button */}
