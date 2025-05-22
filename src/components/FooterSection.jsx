@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/adclubmadras-logo.png";
+import logo from "../assets/logo.svg";
 import footerFream from "../assets/fotter-fream.svg";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
@@ -17,31 +17,33 @@ const FooterSection = () => {
       <div className="">
         <div className="grid grid-cols md:grid-cols-12 md:grid-rows-4 gap-4">
           {/* Logo */}
+          <a href="/">
           <div className="md:col-span-2 flex justify-start items-start animate-fadeIn">
             <img
               src={logo}
               alt="logo"
-              className="w-24 sm:w-28 md:w-36 lg:w-40 text-black"
+              className="w-full h-20 text-black"
             />
           </div>
+          </a>
 
           {/* Navigation */}
           <div className="md:col-start-6 md:col-span-6 grid grid-cols-2 sm:grid-cols-4 text-xs md:text-sm font-normal leading-tight gap-y-4 animate-slideInUp mt-6 md:mt-0 text-center md:text-right">
             <div className="flex flex-col space-y-2">
-              <a href="#" className="hover:text-white hover:font-bold  decoration-white transition duration-200">ABOUT US</a>
-              <a href="#" className="hover:text-white hover:font-bold  decoration-white transition duration-200">COURSES</a>
-              <a href="#" className="hover:text-white hover:font-bold  decoration-white transition duration-200">BECOME A MEMBER</a>
+              <a href="/about-us" className="hover:text-white hover:font-bold  decoration-white transition duration-200">ABOUT US</a>
+              <a href="/courses" className="hover:text-white hover:font-bold  decoration-white transition duration-200">COURSES</a>
+              <a href="/become-a-member" className="hover:text-white hover:font-bold  decoration-white transition duration-200">BECOME A MEMBER</a>
             </div>
             <div className="flex flex-col space-y-2">
-              <a href="#" className="hover:text-white hover:font-bold decoration-white transition duration-200">EVENTS</a>
-              <a href="#" className="hover:text-white hover:font-bold  decoration-white transition duration-200">GALLERY</a>
-              <a href="#" className="hover:text-white hover:font-bold  decoration-white transition duration-200">CAREER</a>
+              <a href="/events" className="hover:text-white hover:font-bold decoration-white transition duration-200">EVENTS</a>
+              <a href="/gallery" className="hover:text-white hover:font-bold  decoration-white transition duration-200">GALLERY</a>
+              <a href="/career" className="hover:text-white hover:font-bold  decoration-white transition duration-200">CAREER</a>
             </div>
             <div className="flex flex-col space-y-2 font-extrabold">
-              <a href="#" className="hover:text-white  decoration-white transition duration-200">CONTACT</a>
+              <a href="/contact" className="hover:text-white  decoration-white transition duration-200">CONTACT</a>
             </div>
             <div className="flex flex-col space-y-2 font-extrabold">
-              <a href="#" className="hover:text-white decoration-white transition duration-200">MEMBERS LOGIN</a>
+              <a href="/members-login" className="hover:text-white decoration-white transition duration-200">MEMBERS LOGIN</a>
             </div>
           </div>
 

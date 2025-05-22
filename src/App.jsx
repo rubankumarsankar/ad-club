@@ -1,4 +1,5 @@
-
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import CommunityBanner from './components/CommunityBanner';
 import DiscoverMoments from './components/DiscoverMoments';
 import EventSection from './components/EventSection';
@@ -20,7 +21,7 @@ function App() {
   return (
     <>
       <ThemeProvider>
-        {/* <Loader /> */}
+        
       <HeroSection />
       <LegacySection />
       

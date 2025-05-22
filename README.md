@@ -42,7 +42,7 @@ advertising-club-madras/
 
 ```bash
 git clone https://github.com/rubankumarsankar/ad-club.git
-cd advertising-club-madras
+cd ad-club
 ```
 2. Install Dependencies
 ```bash
