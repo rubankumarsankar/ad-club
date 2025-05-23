@@ -45,7 +45,7 @@ export default function HeroSection() {
             viewport={{ once: true, amount: 0.3 }}
           >
             A Legacy <br />
-            of Innovation <br />
+            of <span className="text-yellow-400">Innovation</span> <br />
             in Advertising
           </motion.h1>
 

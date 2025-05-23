@@ -11,10 +11,19 @@ const images = [image1, image2, image3, image1, image2, image3];
 
 export default function DiscoverMoments() {
   return (
-    <section className="bg-black text-white py-16 px-4 overflow-hidden">
-      <h2 className="text-center text-3xl md:text-4xl font-extrabold uppercase mb-10 font-asgard">
+    <section className="bg-white dark:bg-black text-black dark:text-white py-16 px-4 overflow-hidden transition-colors duration-500">
+      {/* <h2 className="text-center text-3xl md:text-4xl font-extrabold uppercase mb-10 font-asgard">
         Discover Our <br /> Moments
-      </h2>
+      </h2> */}
+      <motion.h2
+                    className="text-center font-asgard font-extrabold text-3xl uppercase mb-12 tracking-wider"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7 }}
+                    viewport={{ once: true }}
+                  >
+                    Discover Our <br /> Moments
+                  </motion.h2>
 
       {/* Auto-scrolling container */}
       <div className="relative w-full overflow-hidden">

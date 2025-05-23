@@ -42,9 +42,19 @@ const events = [
 export default function UpcomingEvents() {
   return (
     <section className="bg-black text-white py-12 px-4">
-      <h2 className="text-center text-yellow-400 font-asgard font-bold text-sm uppercase mb-8">
+      {/* <h2 className="text-center text-yellow-400 font-asgard font-bold text-sm uppercase mb-8">
         Upcoming Events
-      </h2>
+      </h2> */}
+
+      <motion.h2
+              className="text-center font-asgard font-extrabold text-3xl uppercase mb-12 tracking-wider"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
+            >
+              Upcoming Events
+            </motion.h2>
 
       <div className="max-w-5xl mx-auto space-y-6">
         {events.map((event, index) => (

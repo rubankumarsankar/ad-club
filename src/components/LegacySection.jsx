@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
@@ -19,13 +19,25 @@ const sliderData = [
 
 export default function LegacySection() {
   const [activeIndex, setActiveIndex] = useState(0);
+const timeoutRef = useRef(null);
+
+const resetTimeout = () => {
+  if (timeoutRef.current) {
+    clearTimeout(timeoutRef.current);
+  }
+};
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % sliderData.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
+  resetTimeout();
+  timeoutRef.current = setTimeout(() => {
+    setActiveIndex((prev) => (prev + 1) % sliderData.length);
+  }, 2000); // adjust timing here
+
+  return () => resetTimeout();
+}, [activeIndex]);
+
+  
+
 
   return (
     <section className="bg-white dark:bg-black text-black dark:text-white px-6 py-16 md:py-24 transition-colors duration-500">
@@ -52,18 +64,23 @@ export default function LegacySection() {
               {sliderData[activeIndex].title}
             </p>
 
-            <div className="flex justify-center space-x-1 pt-2">
-              {sliderData.map((_, index) => (
-                <span
-                  key={index}
-                  className={`h-1 transition-all duration-300 ${
-                    index === activeIndex
-                      ? "w-10 bg-yellow-400"
-                      : "w-10 bg-gray-400 dark:bg-gray-600 opacity-50"
-                  }`}
-                />
-              ))}
-            </div>
+           <div className="flex justify-center space-x-1 pt-2">
+  {sliderData.map((_, index) => (
+    <button
+      key={index}
+      onClick={() => {
+        resetTimeout();       // cancel old timer
+        setActiveIndex(index) // jump to clicked item
+      }}
+      className={`h-1 transition-all duration-300 focus:outline-none ${
+        index === activeIndex
+          ? "w-10 bg-yellow-400"
+          : "w-10 bg-gray-400 dark:bg-gray-600 opacity-50"
+      }`}
+    />
+  ))}
+</div>
+
           </div>
         </motion.div>
 
@@ -89,12 +106,12 @@ export default function LegacySection() {
 
           <motion.button
             whileHover={{ scale: 1.05 }}
-            className="mt-8 inline-flex font-asgard items-center"
+            className="mt-8 inline-flex font-asgard  items-center"
           >
-            <span className="px-6 py-3 bg-yellow-400 text-black rounded-full font-bold hover:bg-yellow-300 transition-all duration-300">
+            <span className="px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-yellow-400 transition-all duration-300">
               EXPLORE OUR LEGACY
             </span>
-            <span className="px-4 py-3 bg-yellow-400 text-black rounded-full hover:bg-yellow-300 transition-all duration-300 flex items-center justify-center">
+            <span className="px-4 py-3 bg-white text-black rounded-full hover:bg-yellow-400 transition-all duration-300 flex items-center justify-center">
               <ArrowRight className="h-5 w-5" />
             </span>
           </motion.button>

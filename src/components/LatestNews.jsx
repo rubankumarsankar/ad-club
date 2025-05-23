@@ -50,14 +50,11 @@ export default function LatestNews() {
   useEffect(() => {
     resetTimeout();
     timeoutRef.current = setTimeout(() => {
-      setStartIndex((prev) =>
-        (prev + 1) % news.length
-      );
+      setStartIndex((prev) => (prev + 1) % news.length);
     }, 4000);
     return () => resetTimeout();
   }, [startIndex]);
 
-  // Get 3 items in a window, wrap around the array
   const getVisibleItems = () => {
     const items = [];
     for (let i = 0; i < visibleCount; i++) {
@@ -67,7 +64,8 @@ export default function LatestNews() {
   };
 
   return (
-    <section className="bg-black text-white py-16 px-4">
+    <section className="bg-white dark:bg-black text-black dark:text-white py-16 px-4 transition-colors duration-500">
+      {/* Heading */}
       <motion.h2
         className="text-center font-asgard font-extrabold text-3xl uppercase mb-12 tracking-wider"
         initial={{ opacity: 0, y: 30 }}
@@ -86,7 +84,7 @@ export default function LatestNews() {
           transition={{ duration: 0.8 }}
         >
           {getVisibleItems().map((item, idx) => {
-            const isCenter = idx === 1; // middle card
+            const isCenter = idx === 1;
             return (
               <motion.div
                 key={idx}
@@ -98,6 +96,7 @@ export default function LatestNews() {
                 transition={{ duration: 0.5, delay: idx * 0.2 }}
               >
                 <div className="group">
+                  {/* Image */}
                   <div className="w-full h-72 overflow-hidden rounded-md mb-4">
                     <img
                       src={item.image}
@@ -105,28 +104,29 @@ export default function LatestNews() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
+
+                  {/* Subtitle (if any) */}
                   {item.subtitle && (
-                    <div className="bg-gradient-to-t from-[#FADADD] to-[#FAE1DD] text-black text-center p-4 text-sm font-bold mb-4">
+                    <div className="bg-gradient-to-t from-yellow-100 to-yellow-200 dark:from-yellow-800 dark:to-yellow-700 text-black dark:text-white text-center p-4 text-sm font-bold mb-4">
                       {item.subtitle}
                     </div>
                   )}
+
+                  {/* Title */}
                   <p className="text-sm font-bold uppercase mb-2">{item.title}</p>
-                  <div className="border-t border-white border-opacity-40 my-2" />
-                  {/* <span className="text-[10px] uppercase border border-white px-2 py-1 rounded-full inline-block mb-2">
-                    {item.tag}
-                  </span> */}
+                  <div className="border-t border-black dark:border-white border-opacity-40 my-2" />
+
+                  {/* Tag button */}
                   <button
                     type="button"
-                    className="text-[10px] uppercase border border-white px-3 py-1 rounded-full inline-block mb-2 transition-colors duration-300 hover:bg-yellow-400 hover:text-black"
+                    className="text-[10px] uppercase border border-black dark:border-white px-3 py-1 rounded-full inline-block mb-2 transition-colors duration-300 hover:bg-yellow-400 dark:hover:bg-yellow-300 hover:text-black"
                   >
                     {item.tag}
                   </button>
-
                 </div>
               </motion.div>
             );
           })}
-
         </motion.div>
       </div>
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import PenOutline from "../assets/pen-outline.svg";
+import PenOutline from "../assets/Penoutline-bg.svg";
 
 export default function JoinUsSection() {
   return (
