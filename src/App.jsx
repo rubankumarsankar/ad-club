@@ -15,27 +15,25 @@ import UpcomingEvents from './components/UpcomingEvents';
 import WhyJoinUsBanner from './components/WhyJoinUsBanner';
 import { ThemeProvider } from './context/ThemeContext';
 import ThemeToggleButton from './context/ThemeToggleButton';
+import EventGrid from "./components/EventGrid";
 
 
 function App() {
   return (
     <>
       <ThemeProvider>
-        
       <HeroSection />
       <LegacySection />
-      
       <CommunityBanner />
-      
       <WhyJoinUsBanner />
-      <JoinClubSection />
+      {/* <JoinClubSection /> */}
+      <EventGrid />
       <EventSection />
       <UpcomingEvents />
       <LatestNews />
       <JoinUsBanner />
       <JoinUsSection />
       <DiscoverMoments />
-      
       <ScrollToTopWithLoader />
       <FooterSection />
       <ThemeToggleButton />

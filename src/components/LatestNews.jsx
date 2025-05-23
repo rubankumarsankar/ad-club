@@ -112,9 +112,16 @@ export default function LatestNews() {
                   )}
                   <p className="text-sm font-bold uppercase mb-2">{item.title}</p>
                   <div className="border-t border-white border-opacity-40 my-2" />
-                  <span className="text-[10px] uppercase border border-white px-2 py-1 rounded-full inline-block mb-2">
+                  {/* <span className="text-[10px] uppercase border border-white px-2 py-1 rounded-full inline-block mb-2">
                     {item.tag}
-                  </span>
+                  </span> */}
+                  <button
+                    type="button"
+                    className="text-[10px] uppercase border border-white px-3 py-1 rounded-full inline-block mb-2 transition-colors duration-300 hover:bg-yellow-400 hover:text-black"
+                  >
+                    {item.tag}
+                  </button>
+
                 </div>
               </motion.div>
             );

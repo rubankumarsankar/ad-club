@@ -49,13 +49,13 @@ export default function JoinTheClubSection() {
             {hoverIndex === index && (
               <div className="flex justify-center items-center mt-4 gap-4 transition-opacity duration-500 ease-in-out opacity-100 sm:flex-row flex-col">
                 {/* Uncomment this block to show images if needed */}
-                {/* <div className="w-48 h-28 overflow-hidden rounded-lg shadow-lg">
+                <div className="w-48 h-28 overflow-hidden rounded-lg shadow-lg">
                   <img
                     src={topic.image}
                     alt={topic.title}
                     className="w-full h-full object-cover transition-transform duration-500 transform hover:scale-105"
                   />
-                </div> */}
+                </div>
 
                 <button
                   className={`rounded-full p-3 shadow-lg hover:scale-110 transition-transform ${
